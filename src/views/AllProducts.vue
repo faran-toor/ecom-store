@@ -91,6 +91,12 @@ export default {
   width: 304px;
   height: 350px;
 }
+.mobile.product-card {
+  padding: 0;
+  width: 96%;
+  height: 350px;
+  margin: auto;
+}
 .title-enter-from {
   opacity: 0;
   transform: scaleY(-30px);

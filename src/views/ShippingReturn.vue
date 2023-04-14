@@ -62,4 +62,35 @@ p {
   margin-top: 2rem;
   font-size: 18px;
 }
+.mobile .shiping-retunrpolicy {
+  margin: 1rem;
+}
+.mobile .title {
+  font: normal normal bold 50px/1.4em poppins-extralight, poppins, sans-serif;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+.mobile .return-section {
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.mobile p {
+  font-size: 16px;
+  margin-top: 0;
+}
+.mobile .shiping-section {
+  margin: auto;
+  margin-top: 1rem;
+  width: 95%;
+}
+.mobile h1 {
+  text-align: center;
+  font-size: 26px;
+}
 </style>

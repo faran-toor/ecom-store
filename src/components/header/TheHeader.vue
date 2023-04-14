@@ -5,7 +5,7 @@
       <NaveBar />
       <Login class="login" @add-cart="$emit('add-cart')" />
     </div>
-    <div v-if="iconMenu" class="nav-mobile" @click="showMenuBar">
+    <div v-if="iconMenu" class="nav-mobile" @click="$emit('show-menu-bar')">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
         <path
@@ -14,42 +14,33 @@
       </svg>
     </div>
   </header>
-  <transition name="slide">
-    <mobileMenu v-if="showMenu" @close-bar="closeMenuBar"></mobileMenu>
-  </transition>
 </template>
 
 <script>
 import Logo from './Logo.vue'
 import NaveBar from './NaveBar.vue'
 import Login from './Login.vue'
-import mobileMenu from './MobileMenuBar.vue'
 export default {
   data() {
     return {
-      showMenu: false,
-      iconMenu: true
+      iconMenu: false
     }
   },
   components: {
     Logo,
     NaveBar,
-    Login,
-    mobileMenu
+    Login
   },
   mounted() {
-    if (window.innerWidth > 450) {
+    if (window.innerWidth < 450) {
+      this.iconMenu = true
+      document.querySelector('.app').classList.add('mobile')
+    } else if (window.innerWidth > 450) {
       this.iconMenu = false
+      document.querySelector('.app').classList.remove('mobile')
     }
   },
-  methods: {
-    showMenuBar() {
-      this.showMenu = true
-    },
-    closeMenuBar() {
-      this.showMenu = false
-    }
-  }
+  methods: {}
 }
 </script>
 
@@ -86,15 +77,6 @@ export default {
   height: 40px;
   position: absolute;
   left: 4px;
-}
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.5s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateX(100%);
 }
 
 /* .section-enter-from {

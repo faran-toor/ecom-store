@@ -34,6 +34,12 @@ export default {
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
   cursor: pointer;
 }
+.mobile .cart {
+  background-color: rgb(83, 81, 81);
+}
+.mobile .add-cart svg path {
+  fill: rgb(253, 253, 253);
+}
 .add-cart:hover .cart {
   background-color: rgb(83, 81, 81);
 }

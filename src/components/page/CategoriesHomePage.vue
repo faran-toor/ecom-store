@@ -70,10 +70,10 @@ export default {
   },
   methods: {
     moveContainerLeft() {
-      document.querySelector('.outer').scrollLeft -= 333
+      document.querySelector('.outer').scrollLeft -= 325
     },
     moveContainerRight() {
-      document.querySelector('.outer').scrollLeft += 333
+      document.querySelector('.outer').scrollLeft += 325
     },
     async showProducts(title) {
       //   console.log(id)
@@ -131,10 +131,13 @@ export default {
   box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 15%);
   border-radius: 10px;
 }
+.mobile .card-categories:hover {
+  box-shadow: 0px 0px 0px 0px;
+}
 
 .left-icon {
   position: absolute;
-  top: 1180px;
+  top: 1160px;
   left: 5px;
   width: 45px;
   height: 45px;
@@ -145,7 +148,7 @@ export default {
 }
 .right-icon {
   position: absolute;
-  top: 1180px;
+  top: 1160px;
   right: 5px;
   width: 45px;
   z-index: 1;

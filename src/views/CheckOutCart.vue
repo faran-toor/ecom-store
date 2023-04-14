@@ -329,4 +329,37 @@ span.price-sub-total {
 button:hover {
   background: rgb(83 81 81 / 78%);
 }
+/*mobile style*/
+.mobile .outer-check {
+  padding: 45px 20px 40px;
+  display: block;
+  width: 100%;
+  /* margin: auto; */
+}
+.mobile .card {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid rgb(250, 250, 250);
+}
+.mobile .image {
+  /* width: 148px; */
+  padding: 5px;
+}
+.mobile img {
+  width: 100px;
+}
+.mobile .description {
+  padding: 5px;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.mobile .order-card {
+  margin-left: 0;
+  width: 100%;
+}
+.mobile .clos-icon {
+  opacity: 0.8;
+}
 </style>

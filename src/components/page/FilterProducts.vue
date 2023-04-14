@@ -5,7 +5,7 @@
     </div>
     <div class="products-section">
       <div class="products-card" v-for="product in allProduct" :key="product.id">
-        <div class="image">
+        <div class="image" @click="addCart(product.id)">
           <img :src="product.thumbnail" alt="" />
           <button @click="addCart(product.id)" class="addcart-button">Add to cart</button>
         </div>
@@ -54,6 +54,10 @@ export default {
   padding: 5px;
   margin: 16px;
 }
+.products-card:hover {
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+}
 .header {
   margin-bottom: 2rem;
   text-align: center;
@@ -79,6 +83,16 @@ export default {
   top: 22px;
   width: 37%;
 }
+.mobile .header::before {
+  /* no content */
+  color: transparent;
+  width: 0;
+}
+.mobile .header::after {
+  /* no content */
+  color: transparent;
+  width: 0;
+}
 h1 {
   color: rgb(16 16 16);
 }
@@ -87,6 +101,9 @@ h1 {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   height: 300px;
+}
+.mobile .image {
+  cursor: pointer;
 }
 .addcart-button {
   position: absolute;
@@ -145,6 +162,16 @@ h3 {
   top: 22px;
   width: 37%;
 }
+.mobile .footer::before {
+  /* no content */
+  color: transparent;
+  width: 0;
+}
+.mobile .footer::after {
+  /* no content */
+  color: transparent;
+  width: 0;
+}
 button {
   left: 42%;
   padding: 10px;
@@ -155,8 +182,20 @@ button {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+.mobile button {
+  left: 18%;
+}
 button:hover {
   background: rgb(81, 81, 85);
   color: #fff;
+}
+.mobile .products-section {
+  display: block;
+}
+.mobile .products-card {
+  height: 350px;
+  margin: 1rem;
+  width: 92%;
+  padding: 0px;
 }
 </style>

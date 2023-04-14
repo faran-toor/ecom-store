@@ -1,9 +1,8 @@
 <template>
-  <div class="mobile-bar">
+  <div class="tags">
     <router-link to="/">Home</router-link>
     <router-link :to="{ name: 'allProducts' }">Shop All</router-link>
     <router-link to="/about">About</router-link>
-    <router-link v-if="mobileBar" to="/shipping-returns">Shipping Return's</router-link>
   </div>
 </template>
 
@@ -48,19 +47,4 @@ export default {
 a:hover::after {
   width: 15px;
 } */
-.mobile-bar {
-  position: absolute;
-  top: 93px;
-  left: 26px;
-  display: flex;
-  flex-direction: column;
-}
-.mobile-bar a {
-  color: #fff;
-  margin-left: 17px;
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  margin-top: 22px;
-}
 </style>

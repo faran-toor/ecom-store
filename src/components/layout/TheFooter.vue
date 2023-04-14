@@ -22,9 +22,9 @@
       <div class="company-card">
         <h2 class="tit">The Store</h2>
         <ul class="content">
-          <router-link to="/"> Home </router-link>
-          <router-link to="all-products">Shop All </router-link>
-          <router-link to="/about">About</router-link>
+          <li><router-link to="/"> Home </router-link></li>
+          <li><router-link to="all-products">Shop All </router-link></li>
+          <li><router-link to="/about">About</router-link></li>
         </ul>
       </div>
       <div class="sing-card">
@@ -46,7 +46,7 @@ export default {}
 </script>
 
 <style scoped>
-.footer-section[data-v-db5876b4] {
+.footer-section {
   margin-top: 1rem;
   width: 100%;
   height: 400px;
@@ -126,5 +126,44 @@ button {
 }
 button:hover {
   background: #c1bfbf;
+}
+.mobile .card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+}
+.mobile .costomer-care-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mobile .content {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  margin-top: 0%;
+}
+.mobile h2.tit {
+  color: #fff;
+  font-size: 23px;
+}
+.mobile .content li {
+  margin-right: 25px;
+}
+.mobile .connect-links-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mobile .company-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mobile .sing-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>

@@ -177,6 +177,17 @@ export default {
   animation-duration: 0.5s;
   /* display: none; */
 }
+.mobile .add-cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  height: 572px;
+  z-index: 5;
+  animation-name: myAnimation-ed47a08b;
+  animation-duration: 0.5s;
+}
 
 @keyframes myAnimation {
   0% {
@@ -236,6 +247,10 @@ export default {
   height: 60%;
   overflow-y: scroll;
 }
+.mobile .section {
+  height: 58%;
+  overflow-y: scroll;
+}
 .section::-webkit-scrollbar {
   display: none;
 }
@@ -253,6 +268,9 @@ export default {
   cursor: pointer;
 }
 .card:hover .clos-icon {
+  opacity: 0.8;
+}
+.mobile .clos-icon {
   opacity: 0.8;
 }
 .image {

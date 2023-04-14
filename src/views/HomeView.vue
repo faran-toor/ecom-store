@@ -35,7 +35,9 @@ export default {
     FilterProducts
   },
   data() {
-    return {}
+    return {
+      mobileApp: false
+    }
   },
   computed: {
     singleProduct() {
@@ -43,12 +45,18 @@ export default {
       return this.$store.getters.getSingleProduct
     }
   },
-  mounted() {
+  created() {
     this.$store.dispatch('getCategories')
     window.scrollTo({
       top: 0
     })
-    // this.$store.dispatch('filterProducts')
+  },
+  mounted() {
+    if (window.innerWidth < 450) {
+      this.mobileApp = true
+    } else if (window.innerWidth > 450) {
+      this.mobileApp = false
+    }
   },
   methods: {
     addCart() {
@@ -115,5 +123,66 @@ export default {
 }
 .shop-now:hover {
   background: rgb(83 81 81 / 79%);
+}
+.mobile .header-image {
+  position: relative;
+  max-width: 820px;
+  margin: auto;
+  padding: 0px;
+  overflow: hidden;
+}
+.mobile .images {
+  display: block;
+  width: 100%;
+}
+/* .mobile img[data-v-7d4f60e4] {
+    width: 100%;
+    height: 370px;
+} */
+.mobile .shop-now {
+  padding: 10px;
+  text-align: center;
+  font-size: 19px;
+  width: 174px;
+  background: #333333de;
+  border: none;
+  color: #fff;
+  left: 46px;
+  bottom: 31px;
+  cursor: pointer;
+}
+.mobile .title {
+  color: rgba(84, 84, 84, 0.65);
+  text-align: center;
+  font: normal normal normal 35px/1.4em futura-lt-w01-light, futura-lt-w05-light, sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 84px;
+  left: -85px;
+}
+.mobile .upper-content {
+  position: absolute;
+  left: 61px;
+  bottom: 87px;
+  width: 90%;
+  /* z-index: 2; */
+}
+.mobile .image1 img {
+  width: 100%;
+  height: 100%;
+}
+.mobile .image1 {
+  width: 100%;
+  padding: 0px;
+}
+.mobile .image2 {
+  width: 70%;
+  margin: auto;
+}
+
+.mobile .image2 img {
+  margin: 0;
+  left: 0px;
+  width: 100%;
 }
 </style>

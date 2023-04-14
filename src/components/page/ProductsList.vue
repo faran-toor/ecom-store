@@ -104,4 +104,29 @@ export default {
   color: #e12e2e;
   margin-right: 5px;
 }
+.mobile .product {
+  width: 100%;
+  display: inline-block;
+  height: 335px;
+  position: relative;
+}
+.mobile .product-title {
+  line-height: 22px;
+  display: block;
+  overflow: hidden;
+  color: #3c74b9;
+  font-size: 14px;
+  margin-bottom: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 700;
+  text-align: center;
+  font-size: 22px;
+}
+.mobile .product:hover .icons {
+  opacity: 0;
+}
+.mobile .product:hover {
+  box-shadow: 0px 0px 0px 0px;
+}
 </style>

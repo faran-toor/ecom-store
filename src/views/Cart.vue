@@ -142,10 +142,10 @@ h1 {
   margin-top: 2rem;
 }
 .left-side {
-  width: 60%;
+  width: 50%;
 }
 img {
-  width: 100%;
+  width: 90%;
 }
 .right-side {
   width: 35%;
@@ -271,5 +271,21 @@ button:hover {
 .v-leave-to {
   transform: translateY(-15px);
   opacity: 0;
+}
+.mobile .card {
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+}
+.mobile .left-side {
+  width: 99%;
+}
+.mobile img {
+  width: 100%;
+  height: 350px;
+}
+.mobile .right-side {
+  width: 100%;
+  padding: 25px;
 }
 </style>

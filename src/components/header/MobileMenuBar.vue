@@ -10,16 +10,16 @@
         />
       </svg>
     </div>
-    <nave-bar></nave-bar>
+    <mobile-bar @close-menu-bar="$emit('close-menu-bar')"></mobile-bar>
   </div>
   <!-- </transition> -->
 </template>
 
 <script>
-import NaveBar from './NaveBar.vue'
+import MobileBar from './MobileBar.vue'
 export default {
   components: {
-    NaveBar
+    MobileBar
   }
 }
 </script>
