@@ -88,7 +88,7 @@
       <span>Subtotal</span>
       <p>$ {{ totals }}</p>
     </div>
-    <div class="footer">
+    <div class="footer" @click="$emit('close-cart')">
       <router-link to="/check-cart"><button>Check Out</button></router-link>
     </div>
   </div>
@@ -171,7 +171,7 @@ export default {
   top: 0;
   width: 325px;
   background: #fff;
-  height: 680px;
+  height: 700px;
   z-index: 4;
   animation-name: myAnimation;
   animation-duration: 0.5s;
