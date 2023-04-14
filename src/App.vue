@@ -7,7 +7,7 @@
       </transition>
     </router-view>
     <add-cart-page @close-cart="closeCart" v-if="showAddCartPage"></add-cart-page>
-    <add-cart-mobile-icon @add-cart="addCartShow"></add-cart-mobile-icon>
+    <add-cart-mobile-icon v-if="iconMenu" @add-cart="addCartShow"></add-cart-mobile-icon>
     <scroll-up></scroll-up>
     <transition name="slide">
       <mobile-menu-bar
@@ -40,10 +40,17 @@ export default {
     return {
       showSidebar: false,
       showAddCartPage: false,
-      showMenu: false
+      showMenu: false,
+      iconMenu: false
     }
   },
-
+  mounted() {
+    if (window.innerWidth < 450) {
+      this.iconMenu = true
+    } else if (window.innerWidth > 450) {
+      this.iconMenu = false
+    }
+  },
   methods: {
     showSideBar() {
       this.showSidebar = true
@@ -77,7 +84,6 @@ export default {
 .app {
   height: 100%;
   width: 100%;
-  background: #fff;
 }
 .fixed-app {
   position: fixed;
