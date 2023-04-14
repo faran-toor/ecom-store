@@ -171,7 +171,7 @@ export default {
   top: 0;
   width: 325px;
   background: #fff;
-  height: 665px;
+  height: 680px;
   z-index: 4;
   animation-name: myAnimation;
   animation-duration: 0.5s;

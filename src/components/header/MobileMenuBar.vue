@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .mobile-bar-container {
   width: 100%;
-  height: 572px;
+  height: 700px;
   position: fixed;
   top: 0;
   background: rgb(83 81 81 / 95%);
